@@ -1,372 +1,321 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page_title_home">CDMG Automation — AI & Business Automation</title>
-  <meta name="description" data-i18n-content="meta_desc_home" content="We design automation systems that save time, reduce costs, and keep your operations running 24/7.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#06070b" />
+  <title>CDMG Automation • 24/7 Systems</title>
+  <link rel="stylesheet" href="assets/app.css" />
+
+  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
+  <meta property="og:title" content="CDMG Automation • 24/7 Systems" />
+  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CDMG Automation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#030409">
+  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
+  <meta property="og:title" content="CDMG Automation • 24/7 Systems" />
+  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CDMG Automation" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
 </head>
-<body data-page="home">
-  <a class="skip-link" href="#content">Skip to content</a>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grid-bg" aria-hidden="true"></div>
+  
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Home">
+      <div class="logo" aria-hidden="true"></div>
+      <div>CDMG <span style="color:var(--accent)">Automation</span><small>AI & business automation • Systems that scale</small></div>
+    </a>
 
-  <header class="header">
-  <div class="container">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="CDMG Automation">
-        <img src="assets/logo-header.png" alt="CDMG Automation logo">
-      </a>
+    <div class="nav-links" aria-label="Primary navigation">
+      <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
+      <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
+      <a class="pill" href="about.html" data-i18n="nav_about">About</a>
+      <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+      <span style="opacity:.45;margin:0 2px">|</span>
+      <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
+      <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
+      <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
+      <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
+</div>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html" data-nav="home" data-i18n="nav_home">Home</a>
-        <a href="services.html" data-nav="services" data-i18n="nav_services">Services</a>
-        <a href="about.html" data-nav="about" data-i18n="nav_about">About</a>
-        <a href="contact.html" data-nav="contact" data-i18n="nav_contact">Contact</a>
-        <a href="privacy.html" data-nav="privacy" data-i18n="nav_privacy">Privacy</a>
-      </nav>
-
-      <div class="header-right">
-        <select id="langSelect" class="lang-select" aria-label="Language">
-          <option value="en">EN</option>
-          <option value="es">ES</option>
-          <option value="fr">FR</option>
-          <option value="nl">NL</option>
-        </select>
-
-        <a class="btn btn-primary" href="contact.html" data-i18n="cta_primary">Book a free automation call</a>
-
-        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
-          ☰
-        </button>
-      </div>
-    </div>
-
-    <div id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
-      <a href="index.html" data-nav="home" data-i18n="nav_home">Home</a>
-      <a href="services.html" data-nav="services" data-i18n="nav_services">Services</a>
-      <a href="about.html" data-nav="about" data-i18n="nav_about">About</a>
-      <a href="contact.html" data-nav="contact" data-i18n="nav_contact">Contact</a>
-      <a href="privacy.html" data-nav="privacy" data-i18n="nav_privacy">Privacy</a>
+    <div class="nav-right">
+      <select class="select" id="langSelect" aria-label="Language">
+        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="nl">NL</option>
+      </select>
+      <a class="btn primary" href="contact.html" data-i18n="cta_book">Book a free automation call</a>
+      <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
     </div>
   </div>
-</header>
+</div>
 
-  <main id="content">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="kicker">
-              <span class="dot" aria-hidden="true"></span>
-              <span data-i18n="kicker">CDMG Automation</span>
-            </div>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+      <div class="title">Menu</div>
+      <button class="btn" id="menuClose" type="button">Close</button>
+    </div>
+    <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
+    <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
+    <a class="pill" href="about.html" data-i18n="nav_about">About</a>
+    <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
+    <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
+    <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
+    <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
+    <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
+    <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
+</div>
+</div>
 
-            <h1 class="h1">
-              <span data-i18n="hero_title_1">Automate your business.</span><br>
-              <span data-i18n="hero_title_2">Scale without effort.</span>
-            </h1>
+  
+<main class="container" id="main">
+  <section class="hero">
+    <div class="badge"><span class="dot ok"></span><span>Belgium • GDPR-aware builds</span></div>
+    <div style="height:10px"></div>
+    <div class="kicker" data-i18n="hero_kicker">ALL SYSTEMS OPERATIONAL • READY 24/7</div>
+    <div class="h1">
+      <span data-i18n="hero_title_1">Automate your business.</span><br/>
+      <span style="background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent" data-i18n="hero_title_2">Scale without effort.</span>
+    </div>
+    <p class="sub" data-i18n="hero_sub">We design automation systems that save time, reduce costs, and keep your operations running 24/7.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+      <a class="btn primary" href="contact.html" data-i18n="hero_cta_primary">Book a free automation call</a>
+      <a class="btn" href="platform.html" data-i18n="hero_cta_secondary">See how it works</a>
+    </div>
 
-            <p class="lead" data-i18n="hero_subtitle">
-              We design automation systems that save time, reduce costs, and keep your operations running 24/7.
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="contact.html" data-i18n="cta_primary">Book a free automation call</a>
-              <a class="btn btn-ghost" href="#process" data-i18n="cta_secondary">See how it works</a>
-            </div>
-
-            <div class="badges" aria-label="Highlights">
-              <span class="badge" data-i18n="badge_1">24/7 systems</span>
-              <span class="badge" data-i18n="badge_2">ROI-focused</span>
-              <span class="badge" data-i18n="badge_3">Secure by design</span>
-            </div>
+    <div class="hero-row">
+      <div class="card pad hover">
+        <h3 style="font-family:var(--mono);letter-spacing:.2px">LIVE STATUS</h3>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <span class="dot ok pulse" aria-hidden="true"></span>
+          <div class="kicker" id="liveStatus">LIVE STATUS • SYNCING…</div>
+        </div>
+        <div class="grid3">
+          <div class="card pad hover" style="box-shadow:none">
+            <div class="tag ok">24/7</div><h3 style="margin-top:10px">Systems</h3><p>Always‑on flows with calm monitoring.</p>
           </div>
-
-          <div class="hero-card" aria-label="Brand">
-            <img src="assets/logo-full.png" alt="CDMG Automation logo">
-            <div class="note">
-              <span data-i18n="hero_note_left">Premium automation, built to last</span>
-              <span data-i18n="hero_note_right">Fast launches • Clear ROI</span>
-            </div>
+          <div class="card pad hover" style="box-shadow:none">
+            <div class="tag ok">ROI</div><h3 style="margin-top:10px">Focused</h3><p>Automate what saves time or increases revenue.</p>
+          </div>
+          <div class="card pad hover" style="box-shadow:none">
+            <div class="tag ok">Secure</div><h3 style="margin-top:10px">By design</h3><p>Least‑privilege + audit logs + approvals.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="services">
-      <div class="container">
-        <h2 class="section-title" data-i18n="section_what_title">What we automate</h2>
-        <p class="section-subtitle" data-i18n="section_what_subtitle">We don’t sell tools. We build systems that work for you.</p>
-
-        <div class="grid">
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke="white" opacity=".8" stroke-width="1.6"/>
-                <path d="M9 12h6" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M12 9v6" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_ai_title">AI automation systems</h3>
-            <p data-i18n="service_ai_desc">Custom AI workflows that handle repetitive tasks and decisions.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M4 5h16v10H7l-3 3V5z" stroke="white" opacity=".8" stroke-width="1.6" stroke-linejoin="round"/>
-                <path d="M8 9h8M8 12h6" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_whatsapp_title">WhatsApp & chatbots</h3>
-            <p data-i18n="service_whatsapp_desc">Lead capture, qualification, and support—directly in WhatsApp and web chat.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M7 3v3M17 3v3" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M5 8h14" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M6 6h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="white" opacity=".8" stroke-width="1.6"/>
-                <path d="M8 12h4" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_appt_title">Appointment automation</h3>
-            <p data-i18n="service_appt_desc">Bookings, reminders, no-shows prevention, and follow-ups on autopilot.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M5 4h14v16H5V4z" stroke="white" opacity=".8" stroke-width="1.6"/>
-                <path d="M8 8h8M8 12h6M8 16h5" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_crm_title">CRM & lead automation</h3>
-            <p data-i18n="service_crm_desc">Route leads, update pipelines, and notify your team automatically.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M7 7h10v10H7V7z" stroke="white" opacity=".8" stroke-width="1.6"/>
-                <path d="M4 12h3M17 12h3M12 4v3M12 17v3" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_bpa_title">Process automation</h3>
-            <p data-i18n="service_bpa_desc">Connect tools and eliminate manual steps across your business.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M4 19V5" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M4 19h16" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M7 15l3-3 3 2 4-6" stroke="white" opacity=".8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 data-i18n="service_dash_title">Reporting & dashboards</h3>
-            <p data-i18n="service_dash_desc">Real-time visibility with automated reports and KPI dashboards.</p>
-          </div>
+      <aside class="card console">
+        <div class="top">
+          <div style="font-family:var(--mono);font-weight:900">SYSTEM CONSOLE</div>
+          <div class="tag ok"><span class="dot ok" style="width:8px;height:8px;margin-right:6px"></span> OK</div>
         </div>
+        <div class="kv"><span>Mode</span><strong>Safe / Guarded Actions</strong></div>
+        <div class="kv"><span>Connectors</span><strong>Email • CRM • WhatsApp • Calendar</strong></div>
+        <div class="kv"><span>Delivery</span><strong>Retries + Backoff</strong></div>
+        <div class="kv"><span>Next</span><strong>Install a Starter System</strong></div>
+        <div class="small" style="margin-top:12px">Start with <b>Lead Intake → Follow‑up → Appointment</b>, then add invoicing + reporting.</div>
+      </aside>
+    </div>
+  </section>
 
-        <div style="margin-top:14px">
-          <a class="btn" href="services.html">→ <span data-i18n="nav_services">Services</span></a>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section">
-      <div class="container">
-        <div class="card" style="padding:22px">
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap">
-            <div>
-              <div class="small" style="opacity:.85; margin-bottom:6px">automation platform + AI</div>
-              <h2 style="margin:0 0 6px 0" data-i18n="home_suite_title">automation platform + AI automations (new)</h2>
-              <p class="section-subtitle" style="margin:0" data-i18n="home_suite_sub">Want more than a chatbot? Explore complete automations: leads → CRM → booking → payments → reports.</p>
-            </div>
-            <div>
-              <a class="btn btn-primary" href="services.html#automation-suite" data-i18n="home_suite_btn">Explore the automation platform suite</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <h2 class="section-title" data-i18n="section_who_title">Built for growing businesses</h2>
-          <p class="section-subtitle" data-i18n="section_who_subtitle">
-            If your business repeats tasks, it can be automated. We work with teams that want speed, consistency, and measurable results.
-          </p>
-
-          <div class="list">
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="who_1">Clinics & medical practices</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="who_2">Local businesses</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="who_3">Hospitality & Horeca</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="who_4">Service-based companies</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="who_5">Entrepreneurs & agencies</div></div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="section-title" data-i18n="section_benefits_title">Results you can feel</h2>
-          <p class="section-subtitle" data-i18n="section_benefits_subtitle">Less busywork. Faster responses. More revenue per hour.</p>
-
-          <div class="list">
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_1">Less manual work</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_2">Faster lead response</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_3">Lower operational costs</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_4">Fewer missed appointments</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_5">Happier customers</div></div>
-            <div class="li"><div class="check">✓</div><div class="text" data-i18n="benefit_6">Scalable systems</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="container two-col">
-        <div>
-          <h2 class="section-title" data-i18n="section_process_title">How we work</h2>
-          <p class="section-subtitle" data-i18n="section_process_subtitle">A clear, fast process—from audit to launch.</p>
-
-          <div class="steps">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <h4 data-i18n="step_1_title">Free automation audit</h4>
-                <p data-i18n="step_1_desc">We map your workflows and identify the best ROI opportunities.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <h4 data-i18n="step_2_title">System design</h4>
-                <p data-i18n="step_2_desc">We design the automation architecture and define success metrics.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <h4 data-i18n="step_3_title">Implementation</h4>
-                <p data-i18n="step_3_desc">We build, connect, test, and launch your automation.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="num">4</div>
-              <div>
-                <h4 data-i18n="step_4_title">Optimization & scaling</h4>
-                <p data-i18n="step_4_desc">We improve performance and expand to new workflows.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="section-title" data-i18n="section_cases_title">Example automations</h2>
-          <p class="section-subtitle" data-i18n="cases_footnote">*Examples; results vary by business.</p>
-
-          <div class="grid" style="grid-template-columns:1fr; gap:12px;">
-            <div class="card">
-              <h3 data-i18n="case_1_title">Lead qualification bot</h3>
-              <p data-i18n="case_1_desc">Captures leads, asks questions, and books meetings automatically.</p>
-              <div class="small" style="margin-top:10px" data-i18n="case_1_metric">Response time: &lt; 1 min</div>
-            </div>
-
-            <div class="card">
-              <h3 data-i18n="case_2_title">Appointment reminders</h3>
-              <p data-i18n="case_2_desc">Reduces no-shows with smart reminders and confirmations.</p>
-              <div class="small" style="margin-top:10px" data-i18n="case_2_metric">No-shows: −30%*</div>
-            </div>
-
-            <div class="card">
-              <h3 data-i18n="case_3_title">Invoice & admin automation</h3>
-              <p data-i18n="case_3_desc">Auto-create invoices, update CRM, and send status emails.</p>
-              <div class="small" style="margin-top:10px" data-i18n="case_3_metric">Saved: 10+ hrs/week*</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title" data-i18n="section_faq_title">FAQ</h2>
-        <div class="faq">
-          <details>
-            <summary data-i18n="faq_q1">How long does an automation take?</summary>
-            <p data-i18n="faq_a1">Most projects launch in 1–3 weeks depending on scope and integrations.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_q2">Do you work with our existing tools?</summary>
-            <p data-i18n="faq_a2">Yes. We connect CRMs, email, calendars, payment tools, and internal systems.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_q3">Is it secure?</summary>
-            <p data-i18n="faq_a3">We follow least-privilege access, use secure credentials, and document data flows.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq_q4">What does it cost?</summary>
-            <p data-i18n="faq_a4">We offer fixed-price projects and monthly retainers. After a free audit we provide a clear proposal.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="callout">
-          <div class="row">
-            <div>
-              <div class="section-title" style="margin:0" data-i18n="callout_title">Ready to automate your business?</div>
-              <p data-i18n="callout_desc">Book a free call and we’ll propose a plan within 48 hours.</p>
-            </div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-              <a class="btn btn-primary" href="contact.html" data-i18n="callout_btn">Book a free automation call</a>
-              <a class="btn" data-config-href="email" href="mailto:contact@cdmgautomation.com" data-i18n="callout_alt">Email us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
+<section class="section" aria-label="Works with">
+  <div class="card pad hover">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div>
-        <img class="mini" src="assets/logo-mark.png" alt="">
-        <div class="muted" data-i18n="footer_note">CDMG Automation — AI & Business Automation</div>
-        <div class="small" style="margin-top:10px" data-i18n="footer_rights">© 2025 CDMG Automation. All rights reserved.</div>
+        <div class="kicker">WORKS WITH</div>
+        <h2 style="margin:6px 0 0">Your existing tools</h2>
+      </div>
+      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
+    </div>
+    <div class="divider"></div>
+    <div class="grid3" style="margin-top:14px">
+      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
+      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
+      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <h2 data-i18n="sec_what_title">What we automate</h2>
+    <p class="lead" data-i18n="sec_what_lead">We don’t sell tools. We build systems that work for you.</p>
+
+    <div class="grid3">
+      <div class="card pad hover"><h3>AI automation systems</h3><p>Custom AI workflows that handle repetitive tasks and decisions.</p>
+        <div class="meta"><span class="tag ok">Routing</span><span class="tag">Summaries</span><span class="tag">Decision support</span></div></div>
+      <div class="card pad hover"><h3>WhatsApp & chatbots</h3><p>Lead capture, qualification, and support—directly in WhatsApp and web chat.</p>
+        <div class="meta"><span class="tag ok">Lead intake</span><span class="tag">Support</span><span class="tag warn">Approvals</span></div></div>
+      <div class="card pad hover"><h3>Appointment automation</h3><p>Bookings, reminders, no‑shows prevention, and follow‑ups on autopilot.</p>
+        <div class="meta"><span class="tag">Calendar</span><span class="tag ok">Reminders</span><span class="tag">Follow‑ups</span></div></div>
+    </div>
+
+    <div class="grid3" style="margin-top:14px">
+      <div class="card pad hover"><h3>CRM & lead automation</h3><p>Route leads, update pipelines, and notify your team automatically.</p>
+        <div class="meta"><span class="tag">HubSpot</span><span class="tag">Pipedrive</span><span class="tag ok">Automation</span></div></div>
+      <div class="card pad hover"><h3>Process automation</h3><p>Connect tools and eliminate manual steps across your business.</p>
+        <div class="meta"><span class="tag ok">n8n</span><span class="tag">Zapier</span><span class="tag">Make</span></div></div>
+      <div class="card pad hover"><h3>Reporting & dashboards</h3><p>Real-time visibility with automated reports and KPI dashboards.</p>
+        <div class="meta"><span class="tag">KPIs</span><span class="tag ok">Weekly</span><span class="tag">Alerts</span></div></div>
+    </div>
+  </section>
+
+<section class="section" aria-label="Works with">
+  <div class="card pad hover">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <div class="kicker">WORKS WITH</div>
+        <h2 style="margin:6px 0 0">Your existing tools</h2>
+      </div>
+      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
+    </div>
+    <div class="divider"></div>
+    <div class="grid3" style="margin-top:14px">
+      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
+      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
+      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="card pad hover">
+      <h2 style="margin:0 0 8px">How we work</h2>
+      <p class="lead">A clear, fast process — from audit to launch.</p>
+      <div class="grid3">
+        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">1</div><h3 style="margin-top:10px">Free automation audit</h3><p>We map workflows and identify the best ROI opportunities.</p></div>
+        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">2</div><h3 style="margin-top:10px">System design</h3><p>Architecture + success metrics + data flow documentation.</p></div>
+        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">3</div><h3 style="margin-top:10px">Implementation</h3><p>Build, connect, test, launch — with safeguards.</p></div>
+      </div>
+      <div class="grid3" style="margin-top:14px">
+        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">4</div><h3 style="margin-top:10px">Optimization & scaling</h3><p>Improve performance and expand to new workflows.</p></div>
+        <div class="card pad hover" style="box-shadow:none"><div class="tag warn">+</div><h3 style="margin-top:10px">Documentation</h3><p>Simple handover docs so you keep control.</p></div>
+        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">✓</div><h3 style="margin-top:10px">Support</h3><p>Monitoring, alerts, and maintenance options.</p></div>
+      </div>
+    </div>
+  </section>
+
+<section class="section" aria-label="Works with">
+  <div class="card pad hover">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <div class="kicker">WORKS WITH</div>
+        <h2 style="margin:6px 0 0">Your existing tools</h2>
+      </div>
+      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
+    </div>
+    <div class="divider"></div>
+    <div class="grid3" style="margin-top:14px">
+      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
+      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
+      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="hero-row">
+      <div class="card pad hover">
+        <h2 style="margin:0 0 10px">Outcomes you can measure</h2>
+        <p class="lead" style="margin-top:0">We design flows around KPIs: speed, conversion, time saved, and fewer errors.</p>
+        <div class="grid3">
+          <div class="card pad flat">
+            <div class="tag ok">Speed</div>
+            <h3 style="margin-top:10px">Reply in minutes</h3>
+            <p>Automatic confirmations, triage, and routing — without losing quality.</p>
+          </div>
+          <div class="card pad flat">
+            <div class="tag ok">Capacity</div>
+            <h3 style="margin-top:10px">Hours saved weekly</h3>
+            <p>Follow-ups, reminders, updates, and reports run in the background.</p>
+          </div>
+          <div class="card pad flat">
+            <div class="tag ok">Control</div>
+            <h3 style="margin-top:10px">Safeguards built-in</h3>
+            <p>Approvals, limits, logs, and clear rollback paths.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn primary" href="contact.html">Get a free audit</a>
+          <a class="btn" href="services.html">See services</a>
+        </div>
+        <div class="divider"></div>
+        <div style="margin-top:14px">
+          <h2 style="margin:0 0 10px">FAQ</h2>
+          <details>
+            <summary>How fast can we launch?</summary>
+            <p>Most starter systems go live in 1–3 weeks depending on scope and tool access.</p>
+          </details>
+          <details>
+            <summary>Do you work with WhatsApp, email and CRMs?</summary>
+            <p>Yes. Typical stacks include WhatsApp, email, calendars, and CRMs like HubSpot or Pipedrive.</p>
+          </details>
+          <details>
+            <summary>Is this GDPR-friendly?</summary>
+            <p>We build with least-privilege access, explicit data flows, and approvals for sensitive actions.</p>
+          </details>
+        </div>
       </div>
 
-      <div class="links">
-        <a href="services.html" data-i18n="services_link">Services</a>
-        <a href="about.html" data-i18n="about_link">About</a>
-        <a href="contact.html" data-i18n="contact_link">Contact</a>
-        <a href="privacy.html" data-i18n="privacy_link">Privacy Policy</a>
-        <a href="#" data-config-href="linkedin" rel="noopener" target="_blank">LinkedIn</a>
+      <aside class="card console">
+        <div class="top">
+          <div style="font-family:var(--mono);font-weight:900">TRUST</div>
+          <div class="tag ok"><span class="dot ok" style="width:8px;height:8px;margin-right:6px"></span> READY</div>
+        </div>
+        <div class="kv"><span>Delivery</span><strong>Retries + Backoff</strong></div>
+        <div class="kv"><span>Safety</span><strong>Approvals + Limits</strong></div>
+        <div class="kv"><span>Visibility</span><strong>Logs + Weekly KPIs</strong></div>
+        <div class="kv"><span>Next step</span><strong>Free audit call</strong></div>
+        <div class="small" style="margin-top:12px">
+          Want the system-vibe demo? Open <a class="underline" href="platform.html">Platform</a>.
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+  
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div>© <span id="y"></span> CDMG Automation • Belgium • Belgium</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="platform.html">Platform</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
       </div>
     </div>
   </div>
-</footer>
+</div>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 
-  <script src="config.js"></script>
-  <script src="i18n.js"></script>
-  <script src="main.js" defer></script>
+  
+<button class="chat-fab" id="chatFab" aria-label="Open chat"><span style="font-family:var(--mono);font-weight:800">AI</span></button>
+<div class="chat-panel card" id="chatPanel" role="dialog" aria-label="Chat panel">
+  <div class="chat-header">
+    <div>
+      <div class="title" data-i18n="chat_title">Support Console</div>
+      <div class="small" data-i18n="chat_hint">Ask what’s included, onboarding, or what automation fits your business.</div>
+    </div>
+    <button class="btn" id="chatClose" type="button">Close</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <form class="chat-input" id="chatForm">
+    <input id="chatText" placeholder="Type…" autocomplete="off" />
+    <button class="btn primary" type="submit">Send</button>
+  </form>
+</div>
+
+  <script src="assets/app.js" defer></script>
 </body>
 </html>

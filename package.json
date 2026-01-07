@@ -1,0 +1,8 @@
+{
+  "name": "cdmg-hybrid-site",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
