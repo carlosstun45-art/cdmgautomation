@@ -5,135 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#06070b" />
   <title>Contact • CDMG Automation</title>
-  <link rel="stylesheet" href="assets/app.css" />
+  <meta name="description" content="Send your details to CDMG Automation. We’ll reply with the highest‑ROI plan first." />
 
-  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
   <meta property="og:title" content="Contact • CDMG Automation" />
-  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
+  <meta property="og:description" content="Send your details to CDMG Automation. We’ll reply with the highest‑ROI plan first." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CDMG Automation" />
+  <meta property="og:image" content="assets/logo-header.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
+  <link rel="stylesheet" href="assets/app.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="assets/logo-mark-transparent.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="grid-bg" aria-hidden="true"></div>
-  
-<div class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <div class="logo" aria-hidden="true"></div>
-      <div>CDMG <span style="color:var(--accent)">Automation</span><small>AI & business automation • Systems that scale</small></div>
-    </a>
 
-    <div class="nav-links" aria-label="Primary navigation">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand-mark" src="assets/logo-mark-transparent.png" alt="CDMG Automation" />
+        <div class="brand-text"><div class="brand-name">CDMG</div></div>
+      </a>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
+        <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
+        <a class="pill" href="about.html" data-i18n="nav_about">About</a>
+        <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+        <span style="opacity:.45;margin:0 2px">|</span>
+        <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
+        <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
+        <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
+        <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+        <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
+      </div>
+
+      <div class="nav-right">
+        <select class="select" id="langSelect" data-i18n-aria="aria_lang" aria-label="Language">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="nl">🇳🇱 NL</option>
+        </select>
+        <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <div class="title" data-i18n="menu_title">Menu</div>
+        <button class="btn" id="menuClose" type="button" data-i18n="btn_close">Close</button>
+      </div>
       <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
       <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
       <a class="pill" href="about.html" data-i18n="nav_about">About</a>
       <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
       <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-      <span style="opacity:.45;margin:0 2px">|</span>
+      <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
       <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
       <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
       <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-      <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-
-    <div class="nav-right">
-      <select class="select" id="langSelect" aria-label="Language">
-        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="nl">NL</option>
-      </select>
-      <a class="btn primary" href="contact.html" data-i18n="cta_book">Book a free automation call</a>
-      <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+      <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
     </div>
   </div>
-</div>
 
-<div class="drawer" id="drawer" aria-hidden="true">
-  <div class="drawer-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-      <div class="title">Menu</div>
-      <button class="btn" id="menuClose" type="button">Close</button>
-    </div>
-    <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
-    <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
-    <a class="pill" href="about.html" data-i18n="nav_about">About</a>
-    <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
-    <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-    <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
-    <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
-    <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
-    <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-    <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-</div>
+  <main class="container" id="main">
+    <section class="hero" style="padding-bottom:0">
+      <div class="kicker" data-i18n="contact_kicker">CONTACT</div>
+      <div class="h1"><span data-i18n="contact_title">Send your details.</span></div>
+      <p class="sub"><span data-i18n="contact_sub">Tell us your tools + your goal. We’ll reply with the highest‑ROI plan first.</span></p>
+    </section>
 
-  
-<main class="container" id="main">
-  <section class="hero" style="padding-bottom:0">
-    <div class="kicker">CONTACT</div>
-    <div class="h1">Book a free automation call.</div>
-    <p class="sub">Tell us your tools + your goal. We’ll propose the highest-ROI system first.</p>
-  </section>
-  <section class="section">
-    <div class="hero-row">
-      <div class="card pad hover">
-        <h2 style="margin:0 0 10px">Send details</h2>
-        <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="field"><label>Name</label><input name="name" required placeholder="Your name" /></div>
-          <div class="field"><label>Email</label><input name="email" type="email" required placeholder="you@company.com" /></div>
-          <div class="field"><label>What do you want to automate?</label><textarea name="message" rows="6" required placeholder="Example: lead intake → CRM → booking → WhatsApp follow-up"></textarea></div>
-          <button class="btn primary" type="submit" style="width:100%">Submit</button>
-          <div class="small" style="margin-top:10px">This form works on Netlify (no backend needed).</div>
-        </form>
+    <section class="section" data-animate>
+      <div class="hero-row">
+        <div class="card pad hover" data-animate>
+          <h2 style="margin:0 0 10px" data-i18n="contact_send_details">Send details</h2>
+
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="sr-only">
+              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
+            <div class="field">
+              <label data-i18n="form_name">Name</label>
+              <input name="name" required data-i18n-placeholder="ph_name" placeholder="Your name" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="form_email">Email</label>
+              <input name="email" type="email" required data-i18n-placeholder="ph_email" placeholder="you@company.com" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="form_company">Company (optional)</label>
+              <input name="company" data-i18n-placeholder="ph_company" placeholder="Company" />
+            </div>
+
+            <div class="field">
+              <label data-i18n="form_tools">Current tools</label>
+              <input name="tools" data-i18n-placeholder="ph_tools" placeholder="HubSpot, ..." />
+              <div class="help" data-i18n="form_tools_help">Mention HubSpot if you use it.</div>
+            </div>
+
+            <div class="field">
+              <label data-i18n="form_channel">Preferred channel</label>
+              <select name="channel" required>
+                <option value="email" data-i18n="channel_email">Email</option>
+                <option value="whatsapp" data-i18n="channel_whatsapp">WhatsApp</option>
+                <option value="sms" data-i18n="channel_sms">SMS</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label data-i18n="form_message">Message</label>
+              <textarea name="message" rows="6" required data-i18n-placeholder="ph_message" placeholder="Example: lead intake → HubSpot → appointment → WhatsApp follow-up"></textarea>
+            </div>
+
+            <button class="btn primary" type="submit" style="width:100%" data-i18n="btn_submit">Submit</button>
+            <div class="small" style="margin-top:10px" data-i18n="form_netlify_note">This form works on Netlify (no backend needed).</div>
+          </form>
+        </div>
+
+        <aside class="card console" data-animate>
+          <div class="badge" style="margin-bottom:12px">
+            <span class="dot ok"></span>
+            <span><span data-i18n="contact_response_badge">Response within 24h (business days)</span></span>
+          </div>
+
+          <div class="top">
+            <div style="font-family:var(--mono);font-weight:900" data-i18n="contact_direct">DIRECT</div>
+            <div class="tag ok" data-i18n="contact_fast">fast</div>
+          </div>
+
+          <div class="kv"><span data-i18n="contact_label_general">General</span><strong><a class="underline" href="mailto:contact@cdmgautomation.com">contact@cdmgautomation.com</a></strong></div>
+          <div class="kv"><span data-i18n="contact_label_support">Support</span><strong><a class="underline" href="mailto:support@cdmgautomation.com">support@cdmgautomation.com</a></strong></div>
+          <div class="kv"><span data-i18n="contact_label_reply">Reply time</span><strong data-i18n="contact_label_reply_val">&lt; 24h (business days)</strong></div>
+        </aside>
       </div>
-      <aside class="card console">
-        <div class="badge" style="margin-bottom:12px"><span class="dot ok"></span><span>Response within 24h (business days)</span></div>
+    </section>
+  </main>
 
-        <div class="top"><div style="font-family:var(--mono);font-weight:900">DIRECT</div><div class="tag ok">fast</div></div>
-        <div class="kv"><span>Email</span><strong><a href="mailto:contact@cdmgautomation.com">contact@cdmgautomation.com</a></strong></div>
-        <div class="kv"><span>Support</span><strong><a href="mailto:support@cdmgautomation.com">support@cdmgautomation.com</a></strong></div>
-        <div class="kv"><span>Owner</span><strong><a href="mailto:carlos.martinez@cdmgautomation.com">carlos.martinez@cdmgautomation.com</a></strong></div>
-        <div class="kv"><span>Calendar</span><strong><a class="underline" href="#">Add your booking link</a></strong></div>
-        <div class="kv"><span>Reply time</span><strong>&lt; 24h (business days)</strong></div>
-      </aside>
-    </div>
-  </section>
-</main>
-
-  
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div>© <span id="y"></span> CDMG Automation • Belgium</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="platform.html">Platform</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div>© <span id="y"></span> CDMG Automation • Belgium</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="platform.html" data-i18n="footer_platform">Platform</a>
+          <a href="contact.html" data-i18n="footer_contact">Contact</a>
+          <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 
-  
-<button class="chat-fab" id="chatFab" aria-label="Open chat"><span style="font-family:var(--mono);font-weight:800">AI</span></button>
-<div class="chat-panel card" id="chatPanel" role="dialog" aria-label="Chat panel">
-  <div class="chat-header">
-    <div>
-      <div class="title" data-i18n="chat_title">Support Console</div>
-      <div class="small" data-i18n="chat_hint">Ask what’s included, onboarding, or what automation fits your business.</div>
-    </div>
-    <button class="btn" id="chatClose" type="button">Close</button>
-  </div>
-  <div class="chat-body" id="chatBody"></div>
-  <form class="chat-input" id="chatForm">
-    <input id="chatText" placeholder="Type…" autocomplete="off" />
-    <button class="btn primary" type="submit">Send</button>
-  </form>
-</div>
-
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script src="assets/app.js" defer></script>
+  <script src="assets/reveal.js" defer></script>
+  <script src="assets/luxe.js" defer></script>
 </body>
 </html>

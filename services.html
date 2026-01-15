@@ -5,138 +5,185 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#06070b" />
   <title>Services • CDMG Automation</title>
-  <link rel="stylesheet" href="assets/app.css" />
+  <meta name="description" content="CDMG Automation builds reliable automation systems: lead intake, HubSpot CRM, WhatsApp/SMS/email messaging, scheduling, invoicing, and reporting — with safeguards and clear ROI." />
 
-  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
   <meta property="og:title" content="Services • CDMG Automation" />
-  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
+  <meta property="og:description" content="Reliable automation systems for lead intake, HubSpot CRM, messaging, scheduling, invoicing and reporting — built with safeguards." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CDMG Automation" />
+  <meta property="og:image" content="assets/logo-header.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
+  <link rel="stylesheet" href="assets/app.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="assets/logo-mark-transparent.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="grid-bg" aria-hidden="true"></div>
-  
-<div class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <div class="logo" aria-hidden="true"></div>
-      <div>CDMG <span style="color:var(--accent)">Automation</span><small>AI & business automation • Systems that scale</small></div>
-    </a>
 
-    <div class="nav-links" aria-label="Primary navigation">
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand-mark" src="assets/logo-mark-transparent.png" alt="CDMG Automation" />
+        <div class="brand-text"><div class="brand-name">CDMG</div></div>
+      </a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
+        <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
+        <a class="pill" href="about.html" data-i18n="nav_about">About</a>
+        <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+        <span style="opacity:.45;margin:0 2px">|</span>
+        <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
+        <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
+        <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
+        <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+        <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
+      </div>
+      <div class="nav-right">
+        <select class="select" id="langSelect" data-i18n-aria="aria_lang" aria-label="Language">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="nl">🇳🇱 NL</option>
+        </select>
+        <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <div class="title" data-i18n="menu_title">Menu</div>
+        <button class="btn" id="menuClose" type="button" data-i18n="btn_close">Close</button>
+      </div>
       <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
       <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
       <a class="pill" href="about.html" data-i18n="nav_about">About</a>
       <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
       <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-      <span style="opacity:.45;margin:0 2px">|</span>
+      <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
       <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
       <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
       <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-      <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-
-    <div class="nav-right">
-      <select class="select" id="langSelect" aria-label="Language">
-        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="nl">NL</option>
-      </select>
-      <a class="btn primary" href="contact.html" data-i18n="cta_book">Book a free automation call</a>
-      <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+      <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
     </div>
   </div>
-</div>
 
-<div class="drawer" id="drawer" aria-hidden="true">
-  <div class="drawer-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-      <div class="title">Menu</div>
-      <button class="btn" id="menuClose" type="button">Close</button>
-    </div>
-    <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
-    <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
-    <a class="pill" href="about.html" data-i18n="nav_about">About</a>
-    <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
-    <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-    <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
-    <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
-    <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
-    <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-    <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-</div>
+  <main class="container" id="main">
+    <section class="hero" style="padding-bottom:0">
+      <div class="kicker" data-i18n="services_kicker">SERVICES</div>
+      <div class="h1"><span data-i18n="services_title">Automation that feels calm — and performs hard.</span></div>
+      <p class="sub"><span data-i18n="services_sub">Core service lines. We tailor the system to your tools, industry, and compliance needs.</span></p>
+    </section>
 
-  
-<main class="container" id="main">
-  <section class="hero" style="padding-bottom:0">
-    <div class="kicker">SERVICES</div>
-    <div class="h1">Automation that feels calm — and performs hard.</div>
-    <p class="sub">Core service lines. We tailor the system to your tools, industry, and compliance needs.</p>
-  </section>
+    <section class="section" data-animate>
+      <div class="card pad">
+        <div class="kicker" data-i18n="deliverables_kicker">DELIVERABLES</div>
+        <h2 style="margin:6px 0 14px" data-i18n="deliverables_title">What you receive</h2>
+        <div class="grid3">
+          <div class="card pad flat">
+            <div class="tag ok" data-i18n="services_deliv_tag1">System</div>
+            <h3 style="margin-top:10px" data-i18n="services_deliv_title1">Reliable workflows</h3>
+            <p data-i18n="services_deliv_desc1">Clean logic, fallbacks, and predictable outcomes.</p>
+          </div>
+          <div class="card pad flat">
+            <div class="tag ok" data-i18n="services_deliv_tag2">Control</div>
+            <h3 style="margin-top:10px" data-i18n="services_deliv_title2">Safeguards</h3>
+            <p data-i18n="services_deliv_desc2">Approvals, rate limits, retries, and clear rollback paths.</p>
+          </div>
+          <div class="card pad flat">
+            <div class="tag ok" data-i18n="services_deliv_tag3">Visibility</div>
+            <h3 style="margin-top:10px" data-i18n="services_deliv_title3">Reporting</h3>
+            <p data-i18n="services_deliv_desc3">Logs + KPI reporting so you can measure ROI with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="card pad">
-      <div class="kicker">DELIVERABLES</div>
-      <h2 style="margin:6px 0 10px">What you receive</h2>
+    <section class="section" data-animate>
+      <div class="kicker" data-i18n="services_systems_kicker">SYSTEMS</div>
+      <h2 data-i18n="services_systems_title">Systems we build</h2>
+      <p class="lead" data-i18n="services_systems_lead">Choose a channel stack (Email/WhatsApp/SMS) and connect HubSpot. We implement the high‑ROI flows first.</p>
+
       <div class="grid3">
-        <div class="card pad flat"><div class="tag ok">System</div><h3 style="margin-top:10px">Automation workflow</h3><p>Clean flows with clear logic and fallbacks.</p></div>
-        <div class="card pad flat"><div class="tag ok">Control</div><h3 style="margin-top:10px">Safeguards</h3><p>Approvals, rate limits, retries, and error handling.</p></div>
-        <div class="card pad flat"><div class="tag ok">Visibility</div><h3 style="margin-top:10px">Reporting</h3><p>Logs + KPI reporting so you can measure ROI.</p></div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok" data-i18n="services_card_tag_core">Core</div>
+          <h3 style="margin-top:10px" data-i18n="services_card1_title">Lead intake → HubSpot</h3>
+          <p data-i18n="services_card1_desc">Capture, qualify, route, and update properties automatically.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok" data-i18n="services_card_tag_core">Core</div>
+          <h3 style="margin-top:10px" data-i18n="services_card2_title">Follow‑ups that convert</h3>
+          <p data-i18n="services_card2_desc">Sequences with timing, templates, and human handoff points.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok" data-i18n="services_card_tag_ops">Ops</div>
+          <h3 style="margin-top:10px" data-i18n="services_card3_title">Support routing</h3>
+          <p data-i18n="services_card3_desc">Triage, summaries, escalation, and SLA-friendly workflows.</p>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="grid3">
-      <div class="card pad hover"><div class="tag ok">Core</div><h3 style="margin-top:10px">Lead → CRM → Booking</h3><p>Capture, qualify, schedule, update CRM, notify team.</p></div>
-      <div class="card pad hover"><div class="tag ok">Core</div><h3 style="margin-top:10px">Customer support routing</h3><p>Auto-triage, SLAs, escalation, summaries, follow-ups.</p></div>
-      <div class="card pad hover"><div class="tag warn">Advanced</div><h3 style="margin-top:10px">AI decision support</h3><p>Turn messages + data into next actions (with approvals).</p></div>
-    </div>
-    <div class="grid3" style="margin-top:14px">
-      <div class="card pad hover"><div class="tag ok">Ops</div><h3 style="margin-top:10px">Invoices & admin</h3><p>Invoices, reminders, payment statuses, accounting sync.</p></div>
-      <div class="card pad hover"><div class="tag ok">Ops</div><h3 style="margin-top:10px">Reporting & KPI dashboards</h3><p>Weekly/monthly reports + alerts so nothing is invisible.</p></div>
-      <div class="card pad hover"><div class="tag ok">Ops</div><h3 style="margin-top:10px">Maintenance</h3><p>Monitoring, logs, incident response, improvements.</p></div>
-    </div>
-  </section>
-  <section class="section"><div class="card pad hover"><h2 style="margin:0 0 10px">Want a simple plan?</h2>
-    <p class="lead">Book a free call and we’ll propose a plan within 48 hours.</p>
-    <a class="btn primary" href="contact.html">Book a free automation call</a></div></section>
-</main>
+      <div class="grid3" style="margin-top:14px">
+        <div class="card pad hover" data-animate>
+          <div class="tag warn" data-i18n="services_card_tag_adv">Advanced</div>
+          <h3 style="margin-top:10px" data-i18n="services_card4_title">Approvals & monitoring</h3>
+          <p data-i18n="services_card4_desc">Guardrails for sensitive actions + alerts when something fails.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok" data-i18n="services_card_tag_ops">Ops</div>
+          <h3 style="margin-top:10px" data-i18n="services_card5_title">Invoices & admin</h3>
+          <p data-i18n="services_card5_desc">Reminders, statuses, and accounting sync where appropriate.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok" data-i18n="services_card_tag_ops">Ops</div>
+          <h3 style="margin-top:10px" data-i18n="services_card6_title">Weekly KPI reports</h3>
+          <p data-i18n="services_card6_desc">Simple dashboards: leads → appointments → deals → revenue impact.</p>
+        </div>
+      </div>
+    </section>
 
-  
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div>© <span id="y"></span> CDMG Automation • Belgium</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="platform.html">Platform</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
+    <section class="section" data-animate>
+      <div class="card pad" style="display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap">
+        <div style="max-width:70ch">
+          <div class="kicker" data-i18n="services_pricing_kicker">PRICING</div>
+          <h2 style="margin:6px 0 10px" data-i18n="services_pricing_title">Pick a plan, then we build the system.</h2>
+          <p class="lead" style="margin:0" data-i18n="services_pricing_lead">Starter, Growth, and Pro are managed HubSpot systems with clear scope, safeguards, and monthly optimization.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <a class="btn primary" href="premium.html" data-i18n="services_pricing_cta1">View pricing</a>
+          <a class="btn" href="contact.html" data-i18n="contact_send_details">Send details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div>© <span id="y"></span> CDMG Automation • Belgium</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="platform.html" data-i18n="footer_platform">Platform</a>
+          <a href="contact.html" data-i18n="footer_contact">Contact</a>
+          <a href="privacy.html" data-i18n="footer_privacy">Privacy</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 
-  
-<button class="chat-fab" id="chatFab" aria-label="Open chat"><span style="font-family:var(--mono);font-weight:800">AI</span></button>
-<div class="chat-panel card" id="chatPanel" role="dialog" aria-label="Chat panel">
-  <div class="chat-header">
-    <div>
-      <div class="title" data-i18n="chat_title">Support Console</div>
-      <div class="small" data-i18n="chat_hint">Ask what’s included, onboarding, or what automation fits your business.</div>
-    </div>
-    <button class="btn" id="chatClose" type="button">Close</button>
-  </div>
-  <div class="chat-body" id="chatBody"></div>
-  <form class="chat-input" id="chatForm">
-    <input id="chatText" placeholder="Type…" autocomplete="off" />
-    <button class="btn primary" type="submit">Send</button>
-  </form>
-</div>
-
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script src="assets/app.js" defer></script>
+  <script src="assets/reveal.js" defer></script>
+  <script src="assets/luxe.js" defer></script>
 </body>
 </html>

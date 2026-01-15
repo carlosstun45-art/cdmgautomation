@@ -1,6 +1,14 @@
-# CDMG Hybrid Site
+# CDMG Pro Site (Manual Deploy + AI Function)
 
-Marketing (Home/Services/About/Contact/Privacy) + System UI (Platform/Build/Library/Premium/Insights/Hub/Dashboard/Login).
+This site is static (HTML/CSS/JS) + an optional Netlify Function for the chat widget.
 
-Deploy: drag & drop zip to Netlify.
-Optional AI chat: set env var OPENAI_API_KEY.
+## Deploy (Manual / Drag & Drop)
+- Upload the ZIP to Netlify (Deploy manually).
+- Works without any build step.
+
+## Enable AI chat
+1) Netlify → Site settings → Environment variables
+2) Add: `OPENAI_API_KEY`
+3) Redeploy (manual upload again)
+
+If no API key is set, the chat falls back to the built-in FAQ responses.

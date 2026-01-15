@@ -5,317 +5,319 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#06070b" />
   <title>CDMG Automation • 24/7 Systems</title>
+  <meta name="description" content="CDMG Automation builds reliable automation systems: lead intake, HubSpot CRM, WhatsApp/SMS/email messaging, scheduling, invoicing, and reporting — with safeguards and clear ROI." />
+
+  <meta property="og:title" content="CDMG Automation • 24/7 Systems" />
+  <meta property="og:description" content="Reliable automation systems for lead intake, HubSpot CRM, messaging, scheduling, invoicing and reporting — built with safeguards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CDMG Automation" />
+  <meta property="og:image" content="assets/logo-header.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="assets/app.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="assets/logo-mark-transparent.png" />
 
-  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
-  <meta property="og:title" content="CDMG Automation • 24/7 Systems" />
-  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CDMG Automation" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
-
-
-  <meta name="description" content="CDMG Automation builds reliable AI automation systems: lead intake, CRM, WhatsApp, appointments, invoicing, and reporting — with safeguards and clear ROI." />
-  <meta property="og:title" content="CDMG Automation • 24/7 Systems" />
-  <meta property="og:description" content="Reliable AI automation systems for lead intake, CRM, WhatsApp, appointments, invoicing and reporting — built with safeguards." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CDMG Automation" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <a class="skip" href="#main">Skip to content</a>
   <div class="grid-bg" aria-hidden="true"></div>
-  
-<div class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <div class="logo" aria-hidden="true"></div>
-      <div>CDMG <span style="color:var(--accent)">Automation</span><small>AI & business automation • Systems that scale</small></div>
-    </a>
 
-    <div class="nav-links" aria-label="Primary navigation">
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand-mark" src="assets/logo-mark-transparent.png" alt="CDMG Automation" />
+        <div class="brand-text"><div class="brand-name">CDMG</div></div>
+      </a>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
+        <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
+        <a class="pill" href="about.html" data-i18n="nav_about">About</a>
+        <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+        <span style="opacity:.45;margin:0 2px">|</span>
+        <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
+        <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
+        <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
+        <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+        <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
+      </div>
+
+      <div class="nav-right">
+        <select class="select" id="langSelect" data-i18n-aria="aria_lang" aria-label="Language">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="nl">🇳🇱 NL</option>
+        </select>
+        <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <div class="title" data-i18n="menu_title">Menu</div>
+        <button class="btn" id="menuClose" type="button" data-i18n="btn_close">Close</button>
+      </div>
       <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
       <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
       <a class="pill" href="about.html" data-i18n="nav_about">About</a>
       <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
       <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-      <span style="opacity:.45;margin:0 2px">|</span>
+      <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
       <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
       <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
       <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-      <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-
-    <div class="nav-right">
-      <select class="select" id="langSelect" aria-label="Language">
-        <option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="nl">NL</option>
-      </select>
-      <a class="btn primary" href="contact.html" data-i18n="cta_book">Book a free automation call</a>
-      <button class="btn hamburger" id="menuOpen" type="button" aria-label="Menu">☰</button>
+      <a class="pill" href="premium.html" data-i18n="nav_premium">Pricing</a>
+      <a class="pill" href="/app/login" data-i18n="nav_portal">Portal</a>
     </div>
   </div>
-</div>
 
-<div class="drawer" id="drawer" aria-hidden="true">
-  <div class="drawer-panel">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-      <div class="title">Menu</div>
-      <button class="btn" id="menuClose" type="button">Close</button>
-    </div>
-    <a class="pill" href="index.html" data-i18n="nav_home">Home</a>
-    <a class="pill" href="services.html" data-i18n="nav_services">Services</a>
-    <a class="pill" href="about.html" data-i18n="nav_about">About</a>
-    <a class="pill" href="contact.html" data-i18n="nav_contact">Contact</a>
-    <a class="pill" href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-    <div class="title" style="margin-top:14px" data-i18n="nav_platform">Platform</div>
-    <a class="pill" href="platform.html" data-i18n="nav_platform">Platform</a>
-    <a class="pill" href="build.html" data-i18n="nav_build">Build</a>
-    <a class="pill" href="library.html" data-i18n="nav_library">Library</a>
-    <a class="pill" href="premium.html" data-i18n="nav_premium">Premium</a>
-</div>
-</div>
+  <main class="container" id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="badge">
+        <span class="dot ok"></span>
+        <span><span data-i18n="badge_gdpr">Belgium • GDPR-aware builds</span></span>
+      </div>
 
-  
-<main class="container" id="main">
-  <section class="hero">
-    <div class="badge"><span class="dot ok"></span><span>Belgium • GDPR-aware builds</span></div>
-    <div style="height:10px"></div>
-    <div class="kicker" data-i18n="hero_kicker">ALL SYSTEMS OPERATIONAL • READY 24/7</div>
-    <div class="h1">
-      <span data-i18n="hero_title_1">Automate your business.</span><br/>
-      <span style="background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent" data-i18n="hero_title_2">Scale without effort.</span>
-    </div>
-    <p class="sub" data-i18n="hero_sub">We design automation systems that save time, reduce costs, and keep your operations running 24/7.</p>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-      <a class="btn primary" href="contact.html" data-i18n="hero_cta_primary">Book a free automation call</a>
-      <a class="btn" href="platform.html" data-i18n="hero_cta_secondary">See how it works</a>
-    </div>
+      <div style="height:10px"></div>
+      <div class="kicker" data-i18n="hero_kicker">ALL SYSTEMS OPERATIONAL • READY 24/7</div>
+      <div class="h1">
+        <span data-i18n="hero_title_1">Automate your business.</span><br />
+        <span style="background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent" data-i18n="hero_title_2">Scale without effort.</span>
+      </div>
+      <p class="sub" data-i18n="hero_sub">We design automation systems that save time, reduce costs, and keep your operations running 24/7.</p>
 
-    <div class="hero-row">
-      <div class="card pad hover">
-        <h3 style="font-family:var(--mono);letter-spacing:.2px">LIVE STATUS</h3>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-          <span class="dot ok pulse" aria-hidden="true"></span>
-          <div class="kicker" id="liveStatus">LIVE STATUS • SYNCING…</div>
-        </div>
-        <div class="grid3">
-          <div class="card pad hover" style="box-shadow:none">
-            <div class="tag ok">24/7</div><h3 style="margin-top:10px">Systems</h3><p>Always‑on flows with calm monitoring.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+        <a class="btn primary" href="contact.html" data-i18n="hero_cta_primary">Send your details</a>
+        <a class="btn" href="platform.html" data-i18n="hero_cta_secondary">See how it works</a>
+      </div>
+
+      <div class="hero-row">
+        <div class="card pad hover" data-animate>
+          <h3 style="font-family:var(--mono);letter-spacing:.2px" data-i18n="home_live_title">LIVE STATUS</h3>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+            <span class="dot ok pulse" aria-hidden="true"></span>
+            <div class="kicker" id="liveStatus" data-i18n="live_syncing">LIVE STATUS • SYNCING…</div>
           </div>
-          <div class="card pad hover" style="box-shadow:none">
-            <div class="tag ok">ROI</div><h3 style="margin-top:10px">Focused</h3><p>Automate what saves time or increases revenue.</p>
-          </div>
-          <div class="card pad hover" style="box-shadow:none">
-            <div class="tag ok">Secure</div><h3 style="margin-top:10px">By design</h3><p>Least‑privilege + audit logs + approvals.</p>
+
+          <div class="grid3">
+            <div class="card pad hover" style="box-shadow:none">
+              <div class="tag ok">24/7</div>
+              <h3 style="margin-top:10px" data-i18n="home_systems_title">Systems</h3>
+              <p data-i18n="home_systems_desc">Always-on flows with calm monitoring.</p>
+            </div>
+            <div class="card pad hover" style="box-shadow:none">
+              <div class="tag ok">ROI</div>
+              <h3 style="margin-top:10px" data-i18n="home_roi_title">Focused</h3>
+              <p data-i18n="home_roi_desc">Automate what saves time or increases revenue.</p>
+            </div>
+            <div class="card pad hover" style="box-shadow:none">
+              <div class="tag ok" data-i18n="home_secure_tag">Secure</div>
+              <h3 style="margin-top:10px" data-i18n="home_secure_title">By design</h3>
+              <p data-i18n="home_secure_desc">Least-privilege + audit logs + approvals.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <aside class="card console">
-        <div class="top">
-          <div style="font-family:var(--mono);font-weight:900">SYSTEM CONSOLE</div>
-          <div class="tag ok"><span class="dot ok" style="width:8px;height:8px;margin-right:6px"></span> OK</div>
+        <div>
+          <div class="divider"></div>
+          <div style="margin-top:14px" data-animate>
+            <h2 style="margin:0 0 10px" data-i18n="faq_title">FAQ</h2>
+            <details>
+              <summary data-i18n="faq_q1">How fast can we launch?</summary>
+              <p data-i18n="faq_a1">Most starter systems go live in 1–3 weeks depending on scope and tool access.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq_q2">Do you work with WhatsApp, email and CRMs?</summary>
+              <p data-i18n="faq_a2">Yes. Typical stacks include WhatsApp, email, calendars, and CRMs like HubSpot or Pipedrive.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq_q3">Is this GDPR-friendly?</summary>
+              <p data-i18n="faq_a3">We build with least-privilege access, explicit data flows, and approvals for sensitive actions.</p>
+            </details>
+          </div>
         </div>
-        <div class="kv"><span>Mode</span><strong>Safe / Guarded Actions</strong></div>
-        <div class="kv"><span>Connectors</span><strong>Email • CRM • WhatsApp • Calendar</strong></div>
-        <div class="kv"><span>Delivery</span><strong>Retries + Backoff</strong></div>
-        <div class="kv"><span>Next</span><strong>Install a Starter System</strong></div>
-        <div class="small" style="margin-top:12px">Start with <b>Lead Intake → Follow‑up → Appointment</b>, then add invoicing + reporting.</div>
-      </aside>
-    </div>
-  </section>
-
-<section class="section" aria-label="Works with">
-  <div class="card pad hover">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div>
-        <div class="kicker">WORKS WITH</div>
-        <h2 style="margin:6px 0 0">Your existing tools</h2>
       </div>
-      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
-    </div>
-    <div class="divider"></div>
-    <div class="grid3" style="margin-top:14px">
-      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
-      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
-      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
-    </div>
-  </div>
-</section>
 
-<section class="section">
-    <h2 data-i18n="sec_what_title">What we automate</h2>
-    <p class="lead" data-i18n="sec_what_lead">We don’t sell tools. We build systems that work for you.</p>
-
-    <div class="grid3">
-      <div class="card pad hover"><h3>AI automation systems</h3><p>Custom AI workflows that handle repetitive tasks and decisions.</p>
-        <div class="meta"><span class="tag ok">Routing</span><span class="tag">Summaries</span><span class="tag">Decision support</span></div></div>
-      <div class="card pad hover"><h3>WhatsApp & chatbots</h3><p>Lead capture, qualification, and support—directly in WhatsApp and web chat.</p>
-        <div class="meta"><span class="tag ok">Lead intake</span><span class="tag">Support</span><span class="tag warn">Approvals</span></div></div>
-      <div class="card pad hover"><h3>Appointment automation</h3><p>Bookings, reminders, no‑shows prevention, and follow‑ups on autopilot.</p>
-        <div class="meta"><span class="tag">Calendar</span><span class="tag ok">Reminders</span><span class="tag">Follow‑ups</span></div></div>
-    </div>
-
-    <div class="grid3" style="margin-top:14px">
-      <div class="card pad hover"><h3>CRM & lead automation</h3><p>Route leads, update pipelines, and notify your team automatically.</p>
-        <div class="meta"><span class="tag">HubSpot</span><span class="tag">Pipedrive</span><span class="tag ok">Automation</span></div></div>
-      <div class="card pad hover"><h3>Process automation</h3><p>Connect tools and eliminate manual steps across your business.</p>
-        <div class="meta"><span class="tag ok">n8n</span><span class="tag">Zapier</span><span class="tag">Make</span></div></div>
-      <div class="card pad hover"><h3>Reporting & dashboards</h3><p>Real-time visibility with automated reports and KPI dashboards.</p>
-        <div class="meta"><span class="tag">KPIs</span><span class="tag ok">Weekly</span><span class="tag">Alerts</span></div></div>
-    </div>
-  </section>
-
-<section class="section" aria-label="Works with">
-  <div class="card pad hover">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div>
-        <div class="kicker">WORKS WITH</div>
-        <h2 style="margin:6px 0 0">Your existing tools</h2>
+      <div style="margin-top:14px" data-animate>
+        <a class="btn" href="services.html" data-i18n="cta_see_services">See services</a>
       </div>
-      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
-    </div>
-    <div class="divider"></div>
-    <div class="grid3" style="margin-top:14px">
-      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
-      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
-      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="card pad hover">
-      <h2 style="margin:0 0 8px">How we work</h2>
-      <p class="lead">A clear, fast process — from audit to launch.</p>
-      <div class="grid3">
-        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">1</div><h3 style="margin-top:10px">Free automation audit</h3><p>We map workflows and identify the best ROI opportunities.</p></div>
-        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">2</div><h3 style="margin-top:10px">System design</h3><p>Architecture + success metrics + data flow documentation.</p></div>
-        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">3</div><h3 style="margin-top:10px">Implementation</h3><p>Build, connect, test, launch — with safeguards.</p></div>
+    <!-- PRICING PREVIEW -->
+    <section class="section" data-animate>
+      <div class="kicker" data-i18n="pricing_kicker">PRICING</div>
+      <h2 data-i18n="home_pricing_h2">Three plans, clear scope.</h2>
+      <p class="lead" data-i18n="home_pricing_lead">Managed HubSpot systems with safeguards. One-time setup, then monthly monitoring and improvements.</p>
+
+      <div class="plans-grid" style="margin-top:18px">
+        <div class="card pricing plan-launch plan-card" data-animate>
+          <div class="plan-head">
+            <div class="plan-top">
+              <span class="badge">Starter</span>
+              <span class="badge" style="opacity:.75" data-i18n="plan_starter_tag">Lead System</span>
+            </div>
+            <h3 class="plan-title">Starter</h3>
+            <p class="small plan-sub" data-i18n="plan_starter_sub">Capture → reply → schedule. A clean foundation.</p>
+            <div class="plan-pricing">
+              <div class="price-line"><span class="price-big">€399</span><span class="price-label" data-i18n="label_setup">setup</span></div>
+              <div class="price-line"><span class="price-big">€299</span><span class="price-label" data-i18n="label_month">/ month</span></div>
+            </div>
+          </div>
+          <ul class="small plan-features">
+            <li data-i18n="plan_starter_f1">1 channel included: Email or WhatsApp or SMS</li>
+            <li data-i18n="plan_starter_f2">Lead capture → HubSpot (properties + lifecycle)</li>
+            <li data-i18n="plan_starter_f3">Auto-reply + team notification</li>
+            <li data-i18n="plan_starter_f4">Basic appointment reminders</li>
+            <li data-i18n="plan_starter_f5">Weekly Pulse report (leads + appointments)</li>
+            <li data-i18n="plan_starter_f6">Up to 3 tools • 1 adjustment/month</li>
+          </ul>
+          <div class="plan-cta"><a class="btn" href="contact.html" data-i18n="plan_starter_cta">Start Starter</a></div>
+          <p class="plan-note" data-i18n="plan_starter_note">Best for a first automation system.</p>
+        </div>
+
+        <div class="card pricing plan-growth plan-card" data-animate style="border-color:rgba(124,247,199,.30)">
+          <div class="plan-head">
+            <div class="plan-top">
+              <span class="badge pop" data-i18n="plan_pop">Most popular</span>
+              <span class="badge" style="border-color:rgba(124,247,199,.22);background:rgba(124,247,199,.08)">Growth</span>
+            </div>
+            <h3 class="plan-title">Growth</h3>
+            <p class="small plan-sub" data-i18n="plan_growth_sub">Follow-up, pipeline, and proposals — built to convert.</p>
+            <div class="plan-pricing">
+              <div class="price-line"><span class="price-big">€749</span><span class="price-label" data-i18n="label_setup">setup</span></div>
+              <div class="price-line"><span class="price-big">€549</span><span class="price-label" data-i18n="label_month">/ month</span></div>
+            </div>
+          </div>
+          <ul class="small plan-features">
+            <li data-i18n="plan_growth_f1">2 channels included (choose your combo)</li>
+            <li data-i18n="plan_growth_f2">HubSpot Sales pipeline (deals + tasks + stages)</li>
+            <li data-i18n="plan_growth_f3">Follow-up sequence (D+1 / D+3 / D+7)</li>
+            <li data-i18n="plan_growth_f4">Post‑proposal follow‑up</li>
+            <li data-i18n="plan_growth_f5">No‑show recovery (reschedule + task)</li>
+            <li data-i18n="plan_growth_f6">KPI Weekly report (lead → appointment → sale)</li>
+            <li data-i18n="plan_growth_f7">Up to 6 tools • 2 adjustments/month</li>
+          </ul>
+          <div class="plan-cta"><a class="btn primary" href="contact.html" data-i18n="plan_growth_cta">Choose Growth</a></div>
+          <p class="plan-note" data-i18n="plan_growth_note">Most teams start here.</p>
+        </div>
+
+        <div class="card pricing plan-pro plan-card" data-animate>
+          <div class="plan-head">
+            <div class="plan-top">
+              <span class="badge">Pro</span>
+              <span class="badge" style="opacity:.75" data-i18n="plan_pro_tag">Growth & Retention</span>
+            </div>
+            <h3 class="plan-title">Pro</h3>
+            <p class="small plan-sub" data-i18n="plan_pro_sub">All channels + retention + monthly optimization.</p>
+            <div class="plan-pricing">
+              <div class="price-line"><span class="price-big">€1,249</span><span class="price-label" data-i18n="label_setup">setup</span></div>
+              <div class="price-line"><span class="price-big">€949</span><span class="price-label" data-i18n="label_month">/ month</span></div>
+            </div>
+          </div>
+          <ul class="small plan-features">
+            <li data-i18n="plan_pro_f1">3 channels included: Email + WhatsApp + SMS</li>
+            <li data-i18n="plan_pro_f2">Reactivation (30/60/90 days) + win‑back flows</li>
+            <li data-i18n="plan_pro_f3">NPS / feedback loop + recovery playbooks</li>
+            <li data-i18n="plan_pro_f4">Advanced routing + approvals + monitoring</li>
+            <li data-i18n="plan_pro_f5">Monthly optimization included</li>
+            <li data-i18n="plan_pro_f6">Up to 10 tools • 4 adjustments/month</li>
+          </ul>
+          <div class="plan-cta"><a class="btn" href="contact.html" data-i18n="plan_pro_cta">Send details</a></div>
+          <p class="plan-note" data-i18n="plan_pro_note">For teams that want scale + clarity.</p>
+        </div>
       </div>
+
+      <div class="grid-3" style="margin-top:18px" data-animate>
+        <div class="mini card">
+          <h3 style="margin:0 0 8px" data-i18n="mini_setup_t">What setup includes</h3>
+          <p class="small" style="margin:0" data-i18n="mini_setup_p">Tool connections, HubSpot configuration (properties, lists, pipelines), end‑to‑end testing, and monitoring.</p>
+        </div>
+        <div class="mini card">
+          <h3 style="margin:0 0 8px" data-i18n="mini_msg_t">Messaging costs</h3>
+          <p class="small" style="margin:0" data-i18n="mini_msg_p">Plans cover automation + management. WhatsApp/SMS sending costs depend on volume and are handled via packs or usage billing.</p>
+        </div>
+        <div class="mini card">
+          <h3 style="margin:0 0 8px" data-i18n="mini_annual_t">Annual option</h3>
+          <p class="small" style="margin:0" data-i18n="mini_annual_p">Pay yearly to save 15%. Setup can be discounted by 35% on annual plans.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" data-animate>
+      <div class="kicker" data-i18n="kicker_onboarding">ONBOARDING</div>
+      <h2 data-i18n="onboarding_title">What happens after you start</h2>
       <div class="grid3" style="margin-top:14px">
-        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">4</div><h3 style="margin-top:10px">Optimization & scaling</h3><p>Improve performance and expand to new workflows.</p></div>
-        <div class="card pad hover" style="box-shadow:none"><div class="tag warn">+</div><h3 style="margin-top:10px">Documentation</h3><p>Simple handover docs so you keep control.</p></div>
-        <div class="card pad hover" style="box-shadow:none"><div class="tag ok">✓</div><h3 style="margin-top:10px">Support</h3><p>Monitoring, alerts, and maintenance options.</p></div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok">01</div>
+          <h3 style="margin-top:10px" data-i18n="on_step1_title">1) Setup & access</h3>
+          <p data-i18n="on_step1_desc">We connect tools, set permissions, and define the exact workflows to activate.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok">02</div>
+          <h3 style="margin-top:10px" data-i18n="on_step2_title">2) Build & QA</h3>
+          <p data-i18n="on_step2_desc">Clear logic, safeguards, retries, and tested fallbacks for edge cases.</p>
+        </div>
+        <div class="card pad hover" data-animate>
+          <div class="tag ok">03</div>
+          <h3 style="margin-top:10px" data-i18n="on_step3_title">3) Launch & optimize</h3>
+          <p data-i18n="on_step3_desc">We monitor, improve flows, and ship upgrades when data shows it pays.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div>© <span id="y"></span> CDMG Automation • Belgium</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="platform.html">Platform</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
-<section class="section" aria-label="Works with">
-  <div class="card pad hover">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+  <!-- CHAT (marketing only) -->
+  <button class="chat-fab" id="chatFab" data-i18n-aria="aria_chat_open" aria-label="Open chat">
+    <span style="font-family:var(--mono);font-weight:800">AI</span>
+  </button>
+  <div class="chat-panel card" id="chatPanel" role="dialog" data-i18n-aria="aria_chat_panel" aria-label="Chat panel">
+    <div class="chat-header">
       <div>
-        <div class="kicker">WORKS WITH</div>
-        <h2 style="margin:6px 0 0">Your existing tools</h2>
+        <div class="title" data-i18n="chat_title">Support Console</div>
+        <div class="small" data-i18n="chat_hint">Ask what’s included, onboarding, or what automation fits your business.</div>
       </div>
-      <div class="small">Email • WhatsApp • Calendars • CRMs • Sheets • Invoicing</div>
+      <button class="btn" id="chatClose" type="button" data-i18n="btn_close">Close</button>
     </div>
-    <div class="divider"></div>
-    <div class="grid3" style="margin-top:14px">
-      <div class="card pad flat"><div class="tag">WhatsApp</div><h3 style="margin-top:10px">Lead & support flows</h3><p>Capture, qualify, and follow-up automatically.</p></div>
-      <div class="card pad flat"><div class="tag">CRM</div><h3 style="margin-top:10px">Pipeline automation</h3><p>Update deals, tasks, and notifications without manual work.</p></div>
-      <div class="card pad flat"><div class="tag">Email</div><h3 style="margin-top:10px">Reliable messaging</h3><p>Templates, cadence, and deliverability-safe sending.</p></div>
-    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <form class="chat-input" id="chatForm">
+      <input id="chatText" data-i18n-placeholder="ph_chat_input" placeholder="Type…" autocomplete="off" />
+      <button class="btn primary" type="submit" data-i18n="btn_send">Send</button>
+    </form>
   </div>
-</section>
-
-<section class="section">
-    <div class="hero-row">
-      <div class="card pad hover">
-        <h2 style="margin:0 0 10px">Outcomes you can measure</h2>
-        <p class="lead" style="margin-top:0">We design flows around KPIs: speed, conversion, time saved, and fewer errors.</p>
-        <div class="grid3">
-          <div class="card pad flat">
-            <div class="tag ok">Speed</div>
-            <h3 style="margin-top:10px">Reply in minutes</h3>
-            <p>Automatic confirmations, triage, and routing — without losing quality.</p>
-          </div>
-          <div class="card pad flat">
-            <div class="tag ok">Capacity</div>
-            <h3 style="margin-top:10px">Hours saved weekly</h3>
-            <p>Follow-ups, reminders, updates, and reports run in the background.</p>
-          </div>
-          <div class="card pad flat">
-            <div class="tag ok">Control</div>
-            <h3 style="margin-top:10px">Safeguards built-in</h3>
-            <p>Approvals, limits, logs, and clear rollback paths.</p>
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn primary" href="contact.html">Get a free audit</a>
-          <a class="btn" href="services.html">See services</a>
-        </div>
-        <div class="divider"></div>
-        <div style="margin-top:14px">
-          <h2 style="margin:0 0 10px">FAQ</h2>
-          <details>
-            <summary>How fast can we launch?</summary>
-            <p>Most starter systems go live in 1–3 weeks depending on scope and tool access.</p>
-          </details>
-          <details>
-            <summary>Do you work with WhatsApp, email and CRMs?</summary>
-            <p>Yes. Typical stacks include WhatsApp, email, calendars, and CRMs like HubSpot or Pipedrive.</p>
-          </details>
-          <details>
-            <summary>Is this GDPR-friendly?</summary>
-            <p>We build with least-privilege access, explicit data flows, and approvals for sensitive actions.</p>
-          </details>
-        </div>
-      </div>
-
-      <aside class="card console">
-        <div class="top">
-          <div style="font-family:var(--mono);font-weight:900">TRUST</div>
-          <div class="tag ok"><span class="dot ok" style="width:8px;height:8px;margin-right:6px"></span> READY</div>
-        </div>
-        <div class="kv"><span>Delivery</span><strong>Retries + Backoff</strong></div>
-        <div class="kv"><span>Safety</span><strong>Approvals + Limits</strong></div>
-        <div class="kv"><span>Visibility</span><strong>Logs + Weekly KPIs</strong></div>
-        <div class="kv"><span>Next step</span><strong>Free audit call</strong></div>
-        <div class="small" style="margin-top:12px">
-          Want the system-vibe demo? Open <a class="underline" href="platform.html">Platform</a>.
-        </div>
-      </aside>
-    </div>
-  </section>
-</main>
-
-  
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div>© <span id="y"></span> CDMG Automation • Belgium • Belgium</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="platform.html">Platform</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a>
-      </div>
-    </div>
-  </div>
-</div>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
-
-  
-<button class="chat-fab" id="chatFab" aria-label="Open chat"><span style="font-family:var(--mono);font-weight:800">AI</span></button>
-<div class="chat-panel card" id="chatPanel" role="dialog" aria-label="Chat panel">
-  <div class="chat-header">
-    <div>
-      <div class="title" data-i18n="chat_title">Support Console</div>
-      <div class="small" data-i18n="chat_hint">Ask what’s included, onboarding, or what automation fits your business.</div>
-    </div>
-    <button class="btn" id="chatClose" type="button">Close</button>
-  </div>
-  <div class="chat-body" id="chatBody"></div>
-  <form class="chat-input" id="chatForm">
-    <input id="chatText" placeholder="Type…" autocomplete="off" />
-    <button class="btn primary" type="submit">Send</button>
-  </form>
-</div>
 
   <script src="assets/app.js" defer></script>
+  <script src="assets/reveal.js" defer></script>
+  <script src="assets/luxe.js" defer></script>
 </body>
 </html>

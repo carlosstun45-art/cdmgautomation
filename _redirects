@@ -1,1 +1,9 @@
 /home /index.html 200
+
+# App routes (pretty URLs)
+/app /app/login.html 200
+/app/login /app/login.html 200
+/app/dashboard /app/dashboard.html 200
+
+# Admin route
+/admin /admin.html 200

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#06070b" />
+  <title>Admin • CDMG Automation</title>
+  <meta name="description" content="Platform admin panel for CDMG Automation." />
+
+  <link rel="stylesheet" href="assets/app.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand-mark" src="assets/logo-mark-transparent.png" alt="CDMG Automation" />
+        <div class="brand-text"><div class="brand-name">CDMG</div></div>
+      </a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a class="pill" href="/app/dashboard" data-i18n="portal_nav_dashboard">Dashboard</a>
+        <a class="pill" href="/admin" data-i18n="portal_nav_admin">Admin</a>
+      </div>
+      <div class="nav-right" style="display:flex;gap:10px;align-items:center">
+        <select class="select" id="langSelect" data-i18n-aria="aria_lang" aria-label="Language">
+          <option value="es">🇪🇸 ES</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="nl">🇳🇱 NL</option>
+        </select>
+        <button class="btn" id="btnLogout" type="button" data-i18n="auth_logout">Log out</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" id="main">
+    <section class="hero" style="padding-bottom:0">
+      <div class="kicker" data-i18n="admin_kicker">ADMIN</div>
+      <div class="h1"><span data-i18n="admin_title">Platform administration</span></div>
+      <p class="sub"><span data-i18n="admin_sub">Manage organizations, users, modules, and requests.</span></p>
+    </section>
+
+    <section class="section" data-animate>
+      <div class="card pad hover" data-animate id="adminGate" style="display:none">
+        <div class="tag warn">403</div>
+        <h3 style="margin-top:10px" data-i18n="admin_forbidden_title">Access denied</h3>
+        <p class="small" data-i18n="admin_forbidden_desc">This area is reserved for platform admins.</p>
+        <div style="margin-top:12px">
+          <a class="btn primary" href="/app/dashboard" data-i18n="admin_back_dashboard">Back to dashboard</a>
+        </div>
+      </div>
+
+      <div id="adminApp" style="display:none">
+        <div class="tabs" role="tablist" aria-label="Admin tabs">
+          <button class="tab active" type="button" data-admin-tab="orgs" data-i18n="admin_tab_orgs">Organizations</button>
+          <button class="tab" type="button" data-admin-tab="users" data-i18n="admin_tab_users">Users</button>
+          <button class="tab" type="button" data-admin-tab="requests" data-i18n="admin_tab_requests">Requests</button>
+          <button class="tab" type="button" data-admin-tab="modules" data-i18n="admin_tab_modules">Modules</button>
+        </div>
+
+        <!-- ORGS -->
+        <div id="paneOrgs">
+          <div class="card pad" style="box-shadow:none">
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end">
+              <div>
+                <div class="kicker" data-i18n="admin_orgs_kicker">CLIENTS</div>
+                <h2 style="margin:6px 0 0" data-i18n="admin_orgs_title">Organizations</h2>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <input id="orgSearch" placeholder="Search" data-i18n-placeholder="ph_search" />
+              </div>
+            </div>
+
+            <div style="margin-top:14px;overflow:auto">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th data-i18n="admin_col_org">Organization</th>
+                    <th data-i18n="admin_col_plan">Plan</th>
+                    <th data-i18n="admin_col_channels">Channels</th>
+                    <th data-i18n="admin_col_actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="orgTbody"></tbody>
+              </table>
+            </div>
+
+            <div class="divider" style="margin:18px 0"></div>
+
+            <h3 style="margin:0 0 10px" data-i18n="admin_new_org">New organization</h3>
+            <form id="orgCreateForm">
+              <div class="grid3" style="grid-template-columns: 2fr 1fr 1fr; align-items:end">
+                <div class="field" style="margin:0">
+                  <label for="orgNameInput" data-i18n="admin_org_name">Organization name</label>
+                  <input id="orgNameInput" required data-i18n-placeholder="ph_org_name" placeholder="Acme" />
+                </div>
+                <div class="field" style="margin:0">
+                  <label for="orgPlanInput" data-i18n="admin_plan">Plan</label>
+                  <select id="orgPlanInput" required>
+                    <option value="starter">Starter</option>
+                    <option value="growth">Growth</option>
+                    <option value="pro">Pro</option>
+                  </select>
+                </div>
+                <button class="btn primary" type="submit" data-i18n="admin_create">Create</button>
+              </div>
+              <div class="help" style="margin-top:10px" data-i18n="admin_channels_note">After creating, pick channels (Email/WhatsApp/SMS) matching the plan.</div>
+            </form>
+          </div>
+        </div>
+
+        <!-- USERS -->
+        <div id="paneUsers" style="display:none">
+          <div class="card pad" style="box-shadow:none">
+            <div class="kicker" data-i18n="admin_users_kicker">USERS</div>
+            <h2 style="margin:6px 0 12px" data-i18n="admin_users_title">Users & memberships</h2>
+            <div class="grid3" style="grid-template-columns: 2fr 1fr 1fr; align-items:end">
+              <div class="field" style="margin:0">
+                <label for="userSelect" data-i18n="admin_select_user">Select user</label>
+                <select id="userSelect" required></select>
+              </div>
+              <div class="field" style="margin:0">
+                <label for="orgSelect" data-i18n="admin_select_org">Select organization</label>
+                <select id="orgSelect" required></select>
+              </div>
+              <div class="field" style="margin:0">
+                <label for="roleSelect" data-i18n="admin_role">Role</label>
+                <select id="roleSelect" required>
+                  <option value="member">member</option>
+                  <option value="owner">owner</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn primary" id="btnAddMember" type="button" style="margin-top:10px" data-i18n="admin_add_member">Add member</button>
+            <div class="divider" style="margin:18px 0"></div>
+            <h3 style="margin:0 0 10px" data-i18n="admin_memberships_title">Memberships</h3>
+            <div style="overflow:auto">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th data-i18n="admin_col_user">User</th>
+                    <th data-i18n="admin_col_org">Organization</th>
+                    <th data-i18n="admin_col_role">Role</th>
+                    <th data-i18n="admin_col_actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="memTbody"></tbody>
+              </table>
+            </div>
+            <div class="help" style="margin-top:10px" data-i18n="admin_invite_note">To invite someone: share the portal link (/app/login). After they register, assign them here.</div>
+          </div>
+        </div>
+
+        <!-- REQUESTS -->
+        <div id="paneRequests" style="display:none">
+          <div class="card pad" style="box-shadow:none">
+            <div class="kicker" data-i18n="admin_requests_kicker">REQUESTS</div>
+            <h2 style="margin:6px 0 12px" data-i18n="admin_requests_title">Requests</h2>
+            <div style="overflow:auto">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th data-i18n="portal_req_date">Date</th>
+                    <th data-i18n="admin_col_org">Organization</th>
+                    <th data-i18n="portal_req_type">Type</th>
+                    <th data-i18n="portal_req_message">Message</th>
+                    <th data-i18n="portal_req_status">Status</th>
+                    <th data-i18n="admin_col_actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="reqAdminTbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULES -->
+        <div id="paneModules" style="display:none">
+          <div class="card pad" style="box-shadow:none">
+            <div class="kicker" data-i18n="admin_modules_kicker">MODULES</div>
+            <h2 style="margin:6px 0 12px" data-i18n="admin_modules_title">Workflow modules</h2>
+
+            <div class="grid3" style="grid-template-columns: 2fr 1fr 1fr; align-items:end">
+              <div class="field" style="margin:0">
+                <label for="modsOrgSelect" data-i18n="admin_select_org">Select organization</label>
+                <select id="modsOrgSelect" required></select>
+              </div>
+              <div class="field" style="margin:0">
+                <label for="modKey" data-i18n="admin_mod_key">Module key</label>
+                <input id="modKey" data-i18n-placeholder="ph_module_key" placeholder="lead_intake" />
+              </div>
+              <button class="btn primary" id="btnAddModule" type="button" data-i18n="admin_mod_add">Add module</button>
+            </div>
+            <div class="help" style="margin-top:10px" data-i18n="admin_mod_note">Modules are enabled/disabled per organization. Config is stored as JSON.</div>
+
+            <div class="divider" style="margin:18px 0"></div>
+            <div style="overflow:auto">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th data-i18n="admin_col_org">Organization</th>
+                    <th data-i18n="admin_mod_key">Key</th>
+                    <th data-i18n="admin_mod_enabled">Enabled</th>
+                    <th data-i18n="admin_col_actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="modsTbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Supabase JS (UMD) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="assets/supabase-client.js" defer></script>
+  <script src="assets/app.js" defer></script>
+  <script src="assets/reveal.js" defer></script>
+  <script src="assets/admin.js" defer></script>
+</body>
+</html>
